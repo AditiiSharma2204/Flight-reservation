@@ -4,3 +4,9 @@ flight
 *.obj
 bookings.tsv
 tickets.txt
+bookings.db
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.streamlit/secrets.toml
