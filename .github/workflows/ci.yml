@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build (warnings as errors)
+        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -Werror -O2 flight.cpp -o flight
+      - name: Smoke test
+        run: sh tests/smoke_test.sh ./flight

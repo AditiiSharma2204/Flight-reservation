@@ -1,0 +1,6 @@
+flight
+*.exe
+*.o
+*.obj
+bookings.tsv
+tickets.txt
