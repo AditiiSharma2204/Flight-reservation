@@ -37,6 +37,8 @@ g++ -std=c++17 -Wall -Wextra -O2 flight.cpp -o flight
 
 It works on Windows, Linux and macOS.
 
+On Windows with MinGW, add `-static` to the command. Otherwise the program may load a different `libstdc++-6.dll`, such as the one bundled with Git for Windows, and crash. The Makefile does this automatically.
+
 ## Fares
 
 | Class           | Fare multiplier | GST |

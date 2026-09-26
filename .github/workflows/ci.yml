@@ -16,6 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - name: Build (warnings as errors)
-        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -Werror -O2 flight.cpp -o flight
+        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -Werror -O2 flight.cpp -o flight ${{ runner.os == 'Windows' && '-static' || '' }}
       - name: Smoke test
         run: sh tests/smoke_test.sh ./flight
