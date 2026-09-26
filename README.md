@@ -7,6 +7,8 @@ A flight-booking simulator in two versions:
 
 In both you can search flights, pick a cabin class, pay, get an e-ticket with a PNR, and later view or cancel the booking.
 
+**Live demo: [flight-reservation-trbyyyelpylbscrunhbyae.streamlit.app](https://flight-reservation-trbyyyelpylbscrunhbyae.streamlit.app)**
+
 ![SkyWay flight search results](docs/screenshots/results.png)
 
 ## Web app (SkyWay)
@@ -29,13 +31,17 @@ In both you can search flights, pick a cabin class, pay, get an e-ticket with a 
 - **E-ticket** with a 6-character PNR, shown in the app and downloadable as a printable HTML file.
 - **Manage booking:** find a booking by PNR and last name, see the cancellation fee and refund, and cancel.
 
-| Passengers | Payment |
+| Search | Passengers |
 |---|---|
-| ![Passenger details](docs/screenshots/passengers.png) | ![Payment](docs/screenshots/payment.png) |
+| ![Flight search](docs/screenshots/search.png) | ![Passenger details](docs/screenshots/passengers.png) |
 
-| E-ticket | Manage booking |
+| Payment | E-ticket |
 |---|---|
-| ![E-ticket](docs/screenshots/ticket.png) | ![Manage booking](docs/screenshots/manage.png) |
+| ![Payment](docs/screenshots/payment.png) | ![E-ticket](docs/screenshots/ticket.png) |
+
+| Manage booking |
+|---|
+| ![Manage booking](docs/screenshots/manage.png) |
 
 ### Run it locally
 
@@ -47,6 +53,8 @@ streamlit run streamlit_app.py
 Bookings are stored in `bookings.db` (SQLite) next to the app. Set `FLIGHT_DB` to use a different file.
 
 ### Deploy it for free
+
+The app is already live at <https://flight-reservation-trbyyyelpylbscrunhbyae.streamlit.app>. To deploy your own copy:
 
 1. Sign in to [Streamlit Community Cloud](https://share.streamlit.io) with GitHub.
 2. Click **Create app** and pick this repository.
